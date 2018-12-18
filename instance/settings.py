@@ -1,3 +1,3 @@
-MAIL_USERNAME = 'federico.nagy@gmail.com'
-MAIL_PASSWORD = 'ShipITHolla1!'
-SERVER_NAME = 'local.docker:8000'
+MAIL_USERNAME = 'blabla@blabla.com'
+MAIL_PASSWORD = 'blablabla'
+SERVER_NAME = 'http://207.154.251.100:8000'
