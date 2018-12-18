@@ -2,7 +2,7 @@ from datetime import timedelta
 
 DEBUG = True
 
-SERVER_NAME = 'http://207.154.251.100:8000'
+SERVER_NAME = '207.154.251.100:8000'
 SECRET_KEY = 'insecurekeyfordev'
 
 # Flask-Mail.
