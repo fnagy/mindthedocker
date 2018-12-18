@@ -1,0 +1,24 @@
+{% extends 'layouts/mtgapp.html' %}
+
+{% block content %}
+
+<div class="container">
+
+  <div class="row">
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading text-center">Classifica Monday Night</div>
+        <div class="panel-body">
+
+            {% for table in tables %}
+
+              {{ table|safe }}
+            {% endfor %}
+        </div>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

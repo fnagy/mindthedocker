@@ -1,0 +1,20 @@
+{% extends 'layouts/mtgapp.html' %}
+
+
+{% block content %}
+<div class="container">
+<h1>Upload new File</h1>
+
+  <form class="form-inline" action="./upload" method="post" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+
+    <div class="form-group">
+      <label for="exampleInputFile">File input</label>
+      {{ form.file }}
+      <p class="help-block">Assicurarsi di caricare il file con il nome corretto</p>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+{% endblock %}

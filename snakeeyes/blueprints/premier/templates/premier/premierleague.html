@@ -1,0 +1,107 @@
+{% extends 'layouts/mtgapp.html' %}
+
+{% block styles %}
+{{super()}}
+
+
+<link
+        rel="stylesheet"
+        href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
+
+
+{% endblock %}
+
+{% block scripts %}
+{{super()}}
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    $('#pl').DataTable( {
+      "searching":   true,
+      "lengthMenu": [[4, -1], [4, "All"]],
+      "ordering": false
+    });
+  } );
+</script>
+
+{% endblock %}
+
+
+
+{% block content %}
+
+
+<div class="container-fluid">
+
+
+  <div class="row">
+    <div class="container">
+      <h2>Mind The Gap Premier League</h2>
+
+      <div class="alert alert-warning" role="alert">
+
+          <p style="font-size: 12pt">Vuoi giocare nella Premier League? iscriviti alla Development League!</p>
+
+      </div>
+    </div>
+
+      <div class="col-lg-1">
+      </div>
+
+      <div class="col-lg-6">
+
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading text-center">Calendario Premier League</div>
+                <div class="panel-body">
+
+
+                  {% for table in tables %}
+
+                  {{ table|safe }}
+                {% endfor %}
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+      <div class="col-lg-4">
+
+          <div class="panel panel-success">
+              <div class="panel-heading text-center">Classifica</div>
+
+              {% for table in tables2 %}
+
+              {{ table|safe }}
+
+              {% endfor %}
+
+
+
+          </div>
+        </div>
+
+
+
+      <div class="col-lg-1">
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+{% endblock %}

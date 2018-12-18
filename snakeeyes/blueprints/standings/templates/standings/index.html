@@ -1,0 +1,78 @@
+{% extends 'layouts/base2.html' %}
+
+
+
+{%block content %}
+
+&nbsp;
+&nbsp;
+
+
+
+<div class="container">
+	<div class="row">
+    <div class="alert alert-info" role="alert">
+
+  <marquee><p style="font-size: 18pt">MTG Ranking: Coming Soon!</p></marquee>
+    </div>
+	</div>
+</div>
+
+<div class="cointainer-fluid">
+
+  <div class="col col-lg-8">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<div id="filmSnurraID" class="carousel slide" data-ride="carousel">
+
+  <ol class="carousel-indicators">
+    <li data-target="#filmSnurraID" data-slide-to="0" class="active"></li>
+    <li data-target="#filmSnurraID" data-slide-to="1"></li>
+  </ol>
+
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="{{ url_for('static', filename='images/slide-1.jpg') }}" alt="slide 1">
+      <div class="carousel-caption">
+        <h3>news 1</h3>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="{{ url_for('static', filename='images/slide-2.jpg') }}" alt="slide 2">
+      <div class="carousel-caption">
+        <h3>news 2</h3>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+  </div>
+    <div class="col col-lg-4">
+      <div class="jumbotron">
+
+        <h3>Monday Night</h3>
+        {% for table in tables %}
+
+          {{ table|safe }}
+        {% endfor %}
+
+      </div>
+    </div>
+
+
+
+</div>
+
+<div class="container">
+        {% for table in tablesb %}
+
+          {{ table|safe }}
+        {% endfor %}
+      </div>
+
+{%endblock%}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html {% block html_attribs %}{% endblock html_attribs %}>
+{%- block html %}
+  <head>
+    {%- block head %}
+    <title>{% block title %}{{title|default}}{% endblock title %}</title>
+
+    {%- block metas %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%- endblock metas %}
+
+    {%- block styles %}
+    <!-- Bootstrap -->
+    <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='styles/vendor/bootstrap.min.css') }}">
+  <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='styles/main.css') }}">
+  <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='styles/vendor/font-awesome.min.css') }}">
+  <script src="https://code.jquery.com/jquery-1.12.2.min.js"
+          integrity="sha256-lZFHibXzMHo3GGeehn1hudTAP3Sc0uKXBXAzHX1sjtk="
+          crossorigin="anonymous"></script>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="/static/scripts/vendor/jquery-slim.min.js"><\/script>')</script>
+  <script src="{{ url_for('static', filename='scripts/popper.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='scripts/bootstrap.min.js') }}"></script>
+
+
+    {%- endblock styles %}
+
+
+    {%- endblock head %}
+  </head>
+
+
+  <body {% block body_attribs %}{% endblock body_attribs %}>
+    {% block body -%}
+
+
+    {% block navbar %}
+test test test
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">Container</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarsExample07">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown07">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-md-0">
+              <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+            </form>
+          </div>
+        </div>
+      </nav>
+
+    {%- endblock navbar %}
+
+    {% block content -%}
+
+    {%- endblock content %}
+
+
+    {% block scripts %}
+
+    <script
+      src="{{ url_for('static', filename='scripts/vendor/bootstrap.min.js') }}">
+    </script>
+    {%- endblock scripts %}
+
+
+    {%- endblock body %}
+
+  </body>
+{%- endblock html %}
+</html>

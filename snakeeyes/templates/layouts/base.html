@@ -1,0 +1,33 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block metas %}
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description"
+      content="{% block meta_description %}{% endblock %}">
+<meta name="csrf-token" content="{{ csrf_token() }}">
+
+{% endblock %}
+
+
+{% block styles %}
+
+<link
+rel="stylesheet"
+href="{{ url_for('static', filename='styles/vendor/font-awesome.min.css') }}">
+
+{% endblock %}
+
+{% block custom %}{% endblock %}
+
+
+
+<footer class="footer text-center">
+  <div class="container">
+    <ul class="list-inline">
+      <li class="text-muted">© COPYRIGHT 2018 | MTG Darts Clubs | ALL RIGHTS RESERVED</li>
+    </ul>
+  </div>
+</footer>
